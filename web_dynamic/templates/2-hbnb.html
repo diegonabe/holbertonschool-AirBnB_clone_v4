@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBNB</title>
+    <!-- Importar el script JavaScript 2-hbnb.js en lugar de 1-hbnb.js -->
+    <script src="../static/scripts/2-hbnb.js"></script>
+</head>
+<body>
+    <ul>
+        <!-- Lista de amenities -->
+        {% for amenity in amenities %}
+        <li>
+            <!-- Checkbox para cada amenity -->
+            <input type="checkbox" data-id="{{ amenity.id }}" data-name="{{ amenity.name }}">
+            <!-- Nombre del amenity -->
+            <span style="margin-left: 10px;">{{ amenity.name }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    <!-- Nuevo elemento div en el header -->
+    <header>
+        <div id="api_status" style="text-align: right; display: inline-block; border-radius: 50%; width: 40px; height: 40px; background-color: #cccccc; margin-right: 30px; vertical-align: middle;"></div>
+    </header>
+</body>
+</html>
+
